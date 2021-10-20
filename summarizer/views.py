@@ -19,11 +19,11 @@ def output(request):
     if request.method == 'GET':
         txtInput = request.GET.get('txtInput')
         # inputVal = request.POST['inputVal']
-        # from simplet5 import SimpleT5
-        # model = SimpleT5()
+        from simplet5 import SimpleT5
+        model = SimpleT5()
         # # model.from_pretrained(model_type="t5", model_name="t5-base")
-        # model.load_model("t5","/content/mydrive/MyDrive/Summarization/outputs/simplet5-epoch-2-train-loss-1.4634")
-        # summaryContent = model.predict(inputVal)
-        context = {'summaryContent' : txtInput, 'originalText' : txtInput}
-        summaryContent = txtInput
+        model.load_model("t5","./T5")
+        summaryContent = model.predict(txtInput)
+        context = {'summaryContent' : summaryContent, 'originalText' : txtInput}
+#         summaryContent = summaryContent
         return render(request,'summarizer/home3.html',context)
