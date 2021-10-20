@@ -1,15 +1,12 @@
-{% extends "summarizer/base.html" %}
-{% block title %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Sommaire</title>
-{% endblock title %}
-{% block link %}
     <link href="style.css" rel="stylesheet">
-{% endblock link %}
-{% block style %}
     <style>
-        body{
-            background-color: #E5E7EB;
-        }
         #txtInput {
             box-sizing: border-box;
             display: block;
@@ -31,13 +28,16 @@
             overflow: scroll;
         }
     </style>
-{% endblock style %}
+</head>
 
-{% block content %}
+<body>
+    <header style="text-align: center;">
+        <div style="font-size: 2rem; padding: 1rem;" class="header">Sommaire</div>
+    </header>
     <div class="main">
         <!-- <h1>Enter your message: </h1> -->
         <textarea id="txtInput"
-            placeholder="Paste your article conetnt here that you want to summarize or choose file locally" style="margin-bottom: 3px; margin-top: 100px !important;"></textarea>
+            placeholder="Paste your article conetnt here that you want to summarize or choose file locally" style="margin-bottom: 3px;"></textarea>
             <center><input type="file" id="myFile" name="filename" style="margin-bottom: 3px;"></center>          
         <div>
             <button id="btn-translate">Summarize</button>
@@ -52,8 +52,7 @@
             to convert your text from English to Minion speak or Banana language.</p>
     </footer> -->
 
-{% endblock content %}
-{% block script %}
-    <script src="app.js" type="text/javascript"></script>
-{% endblock script %}
+</body>
+<script src="app.js" type="text/javascript"></script>
 
+</html>

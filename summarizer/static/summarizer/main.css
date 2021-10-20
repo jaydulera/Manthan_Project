@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --primary-color: #F2C94C;
+    --text-color:#333333;  
+    --width-break: 600px;    
+}
+
+body{
+    font-family: 'Scheherazade', serif;
+    margin:0;
+    color:var(--text-color); 
+
+}
+
+.header{    
+    background-color : var(--primary-color);    
+}
+
+#btn-summary{
+    border:none;
+    /* padding: 1rem 2rem; */
+    margin: 1rem 0rem;
+    background-color:#e5e7eb;
+    font:inherit;
+    font-size:large;
+}
+
+.main{
+    box-sizing:border-box;
+    max-width:var(--width-break); 
+    margin:auto;
+    padding:1rem;
+}
+
+#output{
+    background-color: #E5E7EB;
+    box-sizing: border-box;
+    border: 1px solid var(--text-color);
+    min-height: 60vh;
+    max-height: 180vh;
+    /* height: 472.511rem; */
+    width: 100%;    
+    padding: 1rem;
+    overflow: scroll;    
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:var(--primary-color);
+    text-align:center;
+    padding:1rem;
+}
+
+footer p{
+    max-width: var(--width-break); 
+    margin:auto;   
+}
